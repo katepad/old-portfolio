@@ -912,14 +912,29 @@ nav .nav-link:hover {
 
     /* =============== HOME ================= */
 
+    .home-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        grid-template-areas:
+            "homeInfo"
+            "homeBtn"
+            "homePic"
+            "homeLinks";
+    }
+
     /* CONTAINS HOME INFO */
     .home-column-left {
-        padding-left: 6rem;
+
+        align-items: center;
+    
+        padding: 0.25rem 1rem;
+        margin-left: 4rem;
+        margin-right: 3rem;
+        margin-top: 3rem;
     }
 
     /* CONTAINS BUTTON */
     .home-row-bottom {
-        margin-left: 2rem;
         padding: 1rem;
         justify-content: center;
         align-items: center;
@@ -927,27 +942,26 @@ nav .nav-link:hover {
 
     /* CONTAINS LINKS */
     .home-column-link {
-        height: 9rem;
-        width: 4rem;
-        margin-top: 4rem;
+        height: 3.5rem;
+        width: 9rem;
+        flex-direction: row;
 
+        margin-top: 1rem;
+        margin-left: 12rem;
     }
 
-    .home-pfp {
-        height: 11rem;
-    
-        box-shadow: 0 1.563rem 1.563rem #121629;
-        border-radius: 1.563rem;
-        z-index: 50;
-    }
-    
-    .home-art {
-        height: 15rem;
-        margin-left: 1rem;
+    .home-column-right {
+        margin-left: 2rem;
     }
 
     .link-buttons {
         height: 2.5rem;
+    }
+
+    /* ========== ABOUT ME ================= */
+
+    .about-me-container {
+        width: 150%;
     }
 
     .about-me-pics{
@@ -956,10 +970,22 @@ nav .nav-link:hover {
 
     .about-me-pictures{
         margin-bottom: 2rem;
+        margin-left: 2rem;
     }
 
+    .about-me-p{
+        font-size: 0.9rem;
+    }
+
+    /* ============================ PROJECTS ========================= */
+
     .projects-text {
-        margin-left: 6rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .projects{
+        width: 150%;
     }
 
     .projects-h2 {
@@ -968,12 +994,30 @@ nav .nav-link:hover {
     }
     
     .projects-p {
-        margin-left: 3rem;
-        margin-right: 3rem;
+        margin-left: 0rem;
+        margin-right: 0rem;
+        padding: 1rem 0.5rem;
+    }
+
+    /* ============================ CONTACT ========================= */
+
+    .contact {
+        width: 130%;
     }
 
     .contact-container {
         justify-content: center;
+        width: 130%
+    }
+
+    .contact-block{
+        margin-left: 0rem;
+        width: 87%;
+    }
+
+    .contact-resume{
+        margin-left: 0rem;
+        width: 87%;
     }
 
     .contact-inputs {
