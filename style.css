@@ -950,10 +950,6 @@ nav .nav-link:hover {
         height: 2.5rem;
     }
 
-    .about-me-container {
-        width: 120%;
-    }
-
     .about-me-pics{
         margin-right: 7rem;
     }
@@ -978,7 +974,6 @@ nav .nav-link:hover {
 
     .contact-container {
         justify-content: center;
-        width: 120%;
     }
 
     .contact-inputs {
