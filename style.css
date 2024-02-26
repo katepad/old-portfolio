@@ -1,0 +1,963 @@
+/* 1545 x 695*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+.recolor {
+    color: #b8c1ec;
+}
+
+.bold-recolor {
+    color: #fffffe;
+    font-weight: bolder;
+}
+
+/* ================================ BASIC BUTTONS ================================== */
+button {
+    padding: 1rem 3rem;
+    cursor: pointer;
+
+    margin: 2rem 1rem;
+
+    color: #232946;
+    background: #eebbc3;
+    border: none;
+    border-radius: 1.563rem;
+    box-shadow: 0 1.25rem 1.875rem #121629;
+
+    font-family: "Inter", sans-serif;
+    font-weight: bold;
+    font-size: 1.5rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover {
+    background: #121629;
+    color: #b8c1ec;
+}
+
+p a {
+    text-decoration: none;
+}
+
+/* ================================ HORIZONTAL LINE ================================== */
+
+hr {
+    border: none;
+    width: 5rem;
+    height: 0.3rem;
+    background-color: #b8c1ec;
+    border-radius: 25px;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+
+/* ========================= SCROLL BAR ELEMENTS ============================ */
+
+::-webkit-scrollbar {
+    width: 1rem;
+}
+
+::-webkit-scrollbar-track {
+    background: #fffffe;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #eebbc3;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #eebbc38c;
+}
+
+
+/* =========================== NAVIGATION MENU =============================== */
+
+
+nav {
+    height: 4.5rem;
+    background: #eebbc3cc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0rem 1rem;
+
+    position: fixed;
+    top: 0rem;
+    width: 100%;
+
+    backdrop-filter: blur(0.25rem);
+    box-shadow: 0 1.25rem 1.875rem #121629;
+    z-index: 51;
+}
+
+.logo {
+    color: #232946;
+    font-size: 2rem;
+    font-weight: bolder;
+    padding: 0 2rem;
+    font-family: "Fjalla One", sans-serif;
+}
+
+nav a {
+    text-decoration: none;
+    color: #232946;
+
+    font-family: "Inter", sans-serif;
+    font-weight: bolder;
+    text-align: center;
+}
+
+
+nav .nav-link {
+    text-decoration: none;
+    color: #232946;
+    padding: 1rem 1.5rem;
+    margin: 0.625rem 1.25rem;
+
+    font-size: 125%;
+    font-weight: bold;
+    text-align: center;
+    
+    border-radius: 1.563rem;
+
+    transition: all 0.4s ease-in-out;
+}
+
+nav .nav-link:hover {
+    color: #eebbc3;
+    background-color: #232946;
+    box-shadow: 0 0.25rem 0.875rem #121629;
+}
+
+/* ================================ HOME ELEMENTS ================================== */
+#home {
+    background: #232946;
+}
+
+.home-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr auto;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+        "homeInfo homePic none"
+        "homeInfo homePic homeLinks"
+        "homeBtn homePic homeLinks";
+}
+
+/* CONTAINS HOME INFO */
+.home-column-left {
+    grid-area: homeInfo;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    padding: 0.25rem 2rem;
+    margin-left: 8rem;
+    margin-top: 3rem;
+}
+
+/* CONTAINS HOME PICTURE */
+.home-column-right {
+    grid-area: homePic;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-right: 6rem;
+    margin-top: 3rem;
+}
+
+/* CONTAINS BUTTON */
+.home-row-bottom {
+    grid-area: homeBtn;
+
+    display: flex;
+
+    padding-top: 0rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    margin-left: 7rem;
+
+}
+
+/* CONTAINS LINKS */
+.home-column-link {
+    grid-area: homeLinks;
+
+    height: 11rem;
+    width: 4rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    background: #2e365c;
+    border-radius: 1.563rem;
+
+    border-color: #121629;
+    padding: 1rem 1rem;
+    box-shadow: 0 1.25rem 1.875rem #121629;
+}
+
+/* HOME HEADER 1 */
+.home-h1 {
+    font-family: "Fjalla One", sans-serif;
+    margin-bottom: 1rem;
+    color: #fffffe;
+    font-size:  2.75rem;
+}
+
+/* HOME HEADER 2 */
+.home-h2 {
+    font-family: "Inter", sans-serif;
+    margin-bottom: 1rem;
+    color: #eebbc3;
+    font-size: 1.4rem;
+}
+
+/* HOME PARAGRAPH STYLE */
+.home-p {
+    font-family: "Inter", sans-serif;
+    color: #b8c1ec;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+}
+
+/* HOME HEADSHOT */
+.home-pic {
+    height: 21rem;
+
+    box-shadow: 0 1.563rem 1.563rem #121629;
+    border-radius: 1.563rem;
+    z-index: 50;
+}
+
+/* HOME PINK BLOB*/
+.home-art {
+    height: 30rem;
+    margin-left: 1rem;
+    filter: drop-shadow(1rem 1rem 1rem #121629cc)
+}
+
+/* LINK BUTTONS */
+.link-buttons {
+    height: 3.75rem;
+}
+
+
+/* ================================ ABOUT ME ================================== */
+
+.about-me {
+    background: #2e365c;
+}
+
+.about-me-container {
+    display: grid;
+    grid-template-columns: auto 2fr 1fr 1fr;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-areas:
+        "skillsTitle skillsTitle abtMeBio abtMeBio"
+        "abtmeSkills abtmeSkills abtMeBio abtMeBio"
+        "abtMeCourses abtMeCourses abtMeBio abtMeBio"
+        "abtMeCourses abtMeCourses abtmePhotos abtmePhotos"
+        "abtMeCourses abtMeCourses abtmePhotos abtmePhotos";
+}
+
+/* ABOUT ME BLOCKS */
+
+    /* COUNTAINS HEADERS OF SKILLS BLOCK */
+.about-me-skills-title {
+    grid-area: skillsTitle;
+
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+    margin-top: 6rem;
+    padding: 0.5rem;
+    padding-right: 1rem;
+}
+
+    /* COUNTAINS SKILLS */
+.about-me-skills {
+    grid-area: abtmeSkills;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    padding-bottom: 3rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+
+    margin-bottom: 1rem;
+}
+
+    /* COUNTAINS INFO ABOUT COURSES */
+.about-me-courses {
+    grid-area: abtMeCourses;
+
+    background: #232946;
+    border-radius: 25px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-left: 5rem;
+    margin-right: 5rem;
+    margin-bottom: 3rem;
+    padding: 3rem 3rem;
+
+    box-shadow: 0 1.25rem 1.875rem #121629;
+    z-index: 1;
+}
+
+    /* COUNTAINS BIO */
+.about-me-bio{
+    grid-area: abtMeBio;
+
+    background: #232946;
+    border-radius: 25px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 6rem;
+    margin-bottom: 2rem;
+    margin-left: 5rem;
+    margin-right: 6rem;
+    padding: 3rem 3rem;
+
+    box-shadow: 0 1.25rem 1.875rem #121629;
+}
+
+    /* COUNTAINS PHOTOS */
+.about-me-pics{
+    grid-area: abtmePhotos;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2.5em 2.5rem;
+}
+
+    /* ABOUT ME TEXT STYLES */
+.about-me-h1 {
+    font-family: "Fjalla One", sans-serif;
+    color: #fffffe;
+    font-size: 2.5rem;
+
+    padding: 0.5rem 1rem;
+
+    border-radius: 25px;
+    backdrop-filter: blur(0.25rem);
+}
+
+.about-me-h2 {
+    font-family: "Inter", sans-serif;
+    margin-bottom: 0.5rem;
+    color: #eebbc3;
+    font-size: 1.563rem;
+    line-height: 1.5;
+}
+
+.about-me-p {
+    font-family: "Inter", sans-serif;
+    color: #b8c1ec;
+    margin-bottom: 0.5rem;
+    line-height: 1.55;
+    font-size: 1.2rem;
+}
+
+.about-me-bubble {
+    background: #b8c1ec;
+    color: #121629;
+
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+
+    border-radius: 25px;
+    padding: 0.5rem 1rem;
+    margin: 0.75rem 0.75rem;
+    box-shadow: 0 1.25rem 1.875rem #121629;
+}
+
+    /* ABOUT ME PICS */
+
+.about-me-keyboard {
+    grid-area: kbimg;
+
+    position: absolute;
+    top: 0rem;
+    left: 1rem;
+
+    height: 12rem;
+    padding: 0rem 1rem;
+}
+
+.about-me-lineart {
+    position:absolute;
+    top: 0.625rem;
+    right: 3.438rem;
+    height: 50rem;
+    z-index: 0;
+}
+
+.about-me-flowers {
+    align-items: center;
+    justify-content: center;
+    height: 10rem;
+}
+
+.about-me-pictures {
+    align-items: center;
+    justify-content: center;
+
+    height: 12rem;
+    margin: 0.5rem;
+    margin-right: 2.5rem;
+    z-index: 51;
+
+    border-radius: 25px;
+    box-shadow: 0 1.25rem 1.875rem #121629;
+}
+
+/* ================================ PROJECTS ================================== */
+
+.projects {
+    background: #232946;
+}
+
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.projects-block {
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "projectImg projectText";
+    
+    padding: 2rem 5rem;
+}
+
+.projects-img {
+    grid-area: projectImg;
+
+    height: 20rem; 
+
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    margin-left: 3.5rem;
+
+    filter: drop-shadow(1rem 1rem 1rem #121629cc)
+}
+
+.projects-text {
+    grid-area: projectText;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.projects-h1 {
+    font-family: "Fjalla One", sans-serif;
+    margin-top: 3rem;
+    color: #fffffe;
+    font-size: 3rem;
+}
+
+.projects-h2 {
+    font-family: "Inter", sans-serif;
+    margin-bottom: 1.5rem;
+    color: #eebbc3;
+    font-size: 1.8rem;
+}
+
+.projects-p {
+    font-size: 1.2rem;
+    font-family: "Inter", sans-serif;
+    color: #b8c1ec;
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+}
+
+.projects-button {
+    padding: 1rem 3rem;
+    cursor: pointer;
+
+    margin: 2rem 1rem;
+
+    color: #232946;
+    background: #eebbc3;
+    border: none;
+    border-radius: 1.563rem;
+    box-shadow: 0 1.25rem 1.875rem #121629;
+
+    font-family: "Inter", sans-serif;
+    font-weight: bold;
+    font-size: 1.5rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* ================================== CONTACT ===================================*/
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+        "contactBlock Resume";
+
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #2e365c;
+}
+
+.contact-block {
+    grid-area: contactBlock;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 0.7rem;
+
+    margin: 4rem 1rem;
+    margin-left: 4rem;
+    padding: 2rem 2rem;
+    padding-left: 6rem;
+
+    background-color: #232946;
+    border-radius: 25px;
+    box-shadow: 0 1.25rem 1.875rem #121629;
+}
+
+.contact-resume {
+    grid-area: Resume;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    margin: 4rem 1rem;
+    margin-right: 4rem;
+    padding: 2rem 2rem;
+
+    background-color: #232946;
+    border-radius: 25px;
+    box-shadow: 0 1.25rem 1.875rem #121629;
+}
+
+.contact-h1 {
+    font-family: "Fjalla One", sans-serif;
+    margin-top: 3rem;
+    color: #fffffe;
+    font-size: 2.5rem;
+}
+
+.contact-h2 {
+    font-family: "Inter", sans-serif;
+    color: #eebbc3;
+    font-size: 1.5rem;
+}
+
+.contact-inputs {
+    width: 25rem;
+    height: 3.2rem;
+    border: none;
+    outline: none;
+    padding-left: 1.5rem;
+
+    font-weight: bold;
+    font-family: "Inter", sans-serif;
+    color: #121629;
+
+    border-radius: 25px;
+}
+
+.contact-inputs:focus {
+    border: 0.3rem solid #eebbc3;
+}
+
+.contact-inputs::placeholder {
+    color: #2e365c;
+}
+
+.contact-block textarea {
+    height: 6rem;
+    padding-top: 1rem;
+    border-radius: 25px;
+}
+
+.contact-resume-img {
+    height: 32rem;
+    margin: 1.5rem 1.5rem;
+}
+
+/* ================================= ANIMATIONS ================================= */
+
+.hidden {
+    opacity: 0;
+    transform: translateY(-3.125rem);
+    transition: all 1s;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0rem);
+}
+
+/* ================================== DIVIDER ==================================== */
+
+.divider {
+    height: 4rem;
+}
+
+
+/* ============================================================================================================================= */
+
+/* ========================== MAIN RESPONSIVE SCREEN ================================= */
+
+@media only screen and (max-width: 1176px) {
+
+    /* =============== NAV ================= */
+
+    .logo {
+        font-size: 1.75rem;
+    }
+    
+    nav .nav-link {
+        font-size: 120%;
+        margin: 0.625rem 0.25rem;
+    }
+
+    /* =============== HOME ================= */
+
+    .home-container {
+        grid-template-columns: 1fr auto;
+        grid-template-rows: auto auto auto;
+        grid-template-areas:
+            "homeInfo none"
+            "homeBtn none"
+            "homePic homeLinks";
+    }
+
+    /* CONTAINS HOME INFO */
+    .home-column-left {
+        margin-left: 0rem;
+        margin-top: 3rem;
+        padding-left: 8rem;
+    }
+
+    /* CONTAINS HOME PICTURE */
+    .home-column-right {
+        margin-right: 0rem;
+    }
+
+    /* CONTAINS BUTTON */
+    .home-row-bottom {
+        margin-left: 0rem;
+        padding: 2em;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* CONTAINS LINKS */
+    .home-column-link {
+        margin-top: 10rem;
+    }
+
+    /* =============== ABOUT ME ================= */
+
+    .about-me-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto auto;
+        grid-template-areas:
+            "skillsTitle"
+            "abtmeSkills"
+            "abtMeCourses"
+            "abtMeBio"
+            "abtmePhotos";
+    }
+    
+    /* COUNTAINS INFO ABOUT COURSES */
+    .about-me-courses {
+        grid-area: abtMeCourses;
+
+        background: #232946;
+        border-radius: 25px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        margin: 2rem 5rem;
+        padding: 3rem 3rem;
+
+        box-shadow: 0 1.25rem 1.875rem #121629;
+    }
+
+    /* COUNTAINS BIO */
+    .about-me-bio{
+        grid-area: abtMeBio;
+
+        background: #232946;
+        border-radius: 25px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        margin: 2rem 5rem;
+        padding: 3rem 3rem;
+
+        box-shadow: 0 1.25rem 1.875rem #121629;
+    }
+
+    /* CONTAINS PHOTOS */
+    .about-me-pics{
+        grid-area: abtmePhotos;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2.5em 2.5rem;
+        margin-left: 5rem;
+    }
+
+    .about-me-lineart {
+        top: 20rem;
+        right: 8rem;
+        z-index: 0;
+    }
+
+    /* ======================= PROJECTS ================================*/
+
+    .projects-img {
+        grid-area: projectImg;
+    
+        height: 14rem; 
+    
+        align-items: center;
+        justify-content: center;
+    
+        margin-top: 3rem;
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+    
+    .projects-h2 {
+        font-family: "Inter", sans-serif;
+        margin-bottom: 1.5rem;
+        color: #eebbc3;
+        font-size: 1.3rem;
+    }
+    
+    .projects-p {
+        font-size: 1rem;
+        font-family: "Inter", sans-serif;
+        color: #b8c1ec;
+        margin-bottom: 0.5rem;
+        line-height: 1.5;
+    }
+
+    .projects-button {
+        padding: 1rem 2rem;
+        cursor: pointer;
+    
+        margin: 1.5rem 2rem;
+    
+        color: #232946;
+        background: #eebbc3;
+        border: none;
+        border-radius: 1.563rem;
+        box-shadow: 0 1.25rem 1.875rem #121629;
+    
+        font-family: "Inter", sans-serif;
+        font-weight: bolder;
+        font-size: 1rem;
+        transition: background-color 0.3s, color 0.3s;
+    }
+    
+    .projects-button:hover {
+        background: #121629;
+        color: #b8c1ec;
+    }
+
+    /* ============= CONTACT =============== */
+
+    .contact-container {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+            "contactBlock"
+            "Resume";
+    }
+
+    .contact-block {
+        margin-left: 1rem;
+    }
+    
+    .contact-resume {
+        margin-right: 1rem;
+    }
+
+}
+
+/* ====================================================================== */
+
+@media only screen and (max-width: 830px) {
+
+    /* =============== NAV ================= */
+
+    .logo {
+        font-size: 1.2rem;
+        padding: 0rem 0.25rem;
+    }
+    
+    nav .nav-link {
+        font-size: 100%;
+        margin: 0.625rem 0.1rem;
+        padding: 0.5rem 0.5rem;
+    }
+
+    /* ============== PROJECTS ====================== */
+
+    .projects-block {
+
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        grid-template-areas:
+        "projectImg"
+        "projectText";
+        
+        padding: 2rem 5rem;
+    }
+
+    .projects-img {
+        grid-area: projectImg;
+    
+        height: 14rem; 
+    
+        align-items: center;
+        justify-content: center;
+    
+        margin-top: 3rem;
+    }
+
+    .projects-h2 {
+        font-family: "Inter", sans-serif;
+        margin-bottom: 1.8rem;
+        color: #eebbc3;
+        font-size: 1.3rem;
+    }
+    
+    .projects-p {
+        font-size: 1rem;
+        font-family: "Inter", sans-serif;
+        color: #b8c1ec;
+        margin-bottom: 1.2rem;
+        line-height: 1.5;
+    }
+
+}
+
+
+/* ========================== MOBILE PHONE SCREEN ================================= */
+
+@media only screen and (max-width: 431px) {
+
+    /* =============== NAV ================= */
+
+    nav {
+        height: 3rem;
+        padding: 0rem 0.25rem;
+    }
+
+    .logo {
+        font-size: 1rem;
+        padding: 0rem 1rem;
+    }
+    
+    nav .nav-link {
+        font-size: 75%;
+        margin: 0.5rem 0.25rem;
+        padding: 0.25rem 0.25rem;
+    }
+
+    /* =============== HOME ================= */
+
+    /* CONTAINS HOME INFO */
+    .home-column-left {
+        padding-left: 6rem;
+    }
+
+    /* CONTAINS BUTTON */
+    .home-row-bottom {
+        margin-left: 2rem;
+        padding: 1rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* CONTAINS LINKS */
+    .home-column-link {
+        height: 9rem;
+        width: 4rem;
+        margin-top: 4rem;
+
+    }
+
+    .home-pfp {
+        height: 11rem;
+    
+        box-shadow: 0 1.563rem 1.563rem #121629;
+        border-radius: 1.563rem;
+        z-index: 50;
+    }
+    
+    .home-art {
+        height: 15rem;
+        margin-left: 1rem;
+    }
+
+    .link-buttons {
+        height: 2.5rem;
+    }
+
+}
