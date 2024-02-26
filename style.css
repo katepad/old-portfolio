@@ -262,11 +262,8 @@ nav .nav-link:hover {
 
 /* ================================ ABOUT ME ================================== */
 
-.about-me {
-    background: #2e365c;
-}
-
 .about-me-container {
+    background: #2e365c;
     display: grid;
     grid-template-columns: auto 2fr 1fr 1fr;
     grid-template-rows: auto auto auto auto auto;
@@ -422,19 +419,12 @@ nav .nav-link:hover {
     z-index: 0;
 }
 
-.about-me-flowers {
-    align-items: center;
-    justify-content: center;
-    height: 10rem;
-}
-
 .about-me-pictures {
     align-items: center;
     justify-content: center;
 
     height: 12rem;
     margin: 0.5rem;
-    margin-right: 2.5rem;
     z-index: 51;
 
     border-radius: 25px;
@@ -960,23 +950,44 @@ nav .nav-link:hover {
         height: 2.5rem;
     }
 
-    .about-me-pictures {
-        margin-right: 0.5rem;
+    .about-me-container {
+        width: 120%;
+    }
+
+    .about-me-pics{
+        margin-right: 7rem;
+    }
+
+    .about-me-pictures{
+        margin-bottom: 2rem;
+    }
+
+    .projects-text {
+        margin-left: 6rem;
     }
 
     .projects-h2 {
-        margin-left: 2rem;
-        margin-right: 2rem;
+        margin-left: 3rem;
+        margin-right: 3rem;
     }
     
     .projects-p {
-        margin-left: 2rem;
-        margin-right: 2rem;
+        margin-left: 3rem;
+        margin-right: 3rem;
+    }
+
+    .contact-container {
+        justify-content: center;
+        width: 120%;
     }
 
     .contact-inputs {
     width: 18rem;
     height: 3.2rem;
+    }
+
+    .divider {
+        width: 120%;
     }
 
 }
