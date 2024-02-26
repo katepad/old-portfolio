@@ -960,4 +960,23 @@ nav .nav-link:hover {
         height: 2.5rem;
     }
 
+    .about-me-pictures {
+        margin-right: 0.5rem;
+    }
+
+    .projects-h2 {
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+    
+    .projects-p {
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+
+    .contact-inputs {
+    width: 18rem;
+    height: 3.2rem;
+    }
+
 }
