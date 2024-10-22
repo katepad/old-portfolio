@@ -496,6 +496,14 @@ nav .nav-link:hover {
     font-size: 1.8rem;
 }
 
+.projects-h3 {
+    font-family: "Inter", sans-serif;
+    margin-bottom: 1.25rem;
+    color: #b8c1ec;
+    font-size: 1.35rem;
+    font-style: italic;
+}
+
 .projects-p {
     font-size: 1.2rem;
     font-family: "Inter", sans-serif;
@@ -971,6 +979,10 @@ nav .nav-link:hover {
     .about-me-pictures{
         margin-bottom: 2rem;
         margin-left: 2rem;
+    }
+
+    .about-me-p{
+        font-size: 0.9rem;
     }
 
     /* ============================ PROJECTS ========================= */
